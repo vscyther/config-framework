@@ -1,3 +1,5 @@
 package com.github.vscyther.config.annotation
 
-annotation class ConfigPath()
+@Target(AnnotationTarget.CLASS)
+@Retention(AnnotationRetention.RUNTIME)
+annotation class ConfigPath(val value: String)

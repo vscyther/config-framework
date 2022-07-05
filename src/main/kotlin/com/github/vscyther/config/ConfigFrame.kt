@@ -1,5 +1,7 @@
 package com.github.vscyther.config
 
+import com.github.vscyther.config.annotation.ConfigKey
+import com.github.vscyther.config.annotation.ConfigPath
 import org.bukkit.ChatColor
 import org.bukkit.configuration.file.YamlConfiguration
 import org.bukkit.plugin.java.JavaPlugin
@@ -44,11 +46,3 @@ class ConfigFrame(private val plugin: JavaPlugin) {
     }
 
 }
-
-@Target(AnnotationTarget.FIELD)
-@Retention(AnnotationRetention.RUNTIME)
-annotation class ConfigKey(val value: String)
-
-@Target(AnnotationTarget.CLASS)
-@Retention(AnnotationRetention.RUNTIME)
-annotation class ConfigPath(val value: String)
