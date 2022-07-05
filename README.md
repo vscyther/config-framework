@@ -24,7 +24,7 @@
 <dependency>
     <groupId>com.github.vscyther</groupId>
     <artifactId>config-framework</artifactId>
-    <version>Tag</version>
+    <version>1.0</version>
 </dependency>
 ```
 
@@ -38,7 +38,7 @@ repositories {
 
 ```gradle
 dependencies {
-    implementation 'com.github.vscyther:config-framework:Tag'
+    implementation 'com.github.vscyther:config-framework:1.0'
 }
 ```
 
