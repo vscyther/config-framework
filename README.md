@@ -1,9 +1,48 @@
 # config-framework
 
+---
+
 ## TODO
 
 - [ ] Creating transformers for new classes
 - [ ] Support creation of JSON files
+
+---
+
+## Installation
+
+### Maven
+
+```maven
+<repository>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
+</repository>
+```
+
+```maven
+<dependency>
+    <groupId>com.github.vscyther</groupId>
+    <artifactId>config-framework</artifactId>
+    <version>Tag</version>
+</dependency>
+```
+
+### Gradle
+
+```gradle
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+```
+
+```gradle
+dependencies {
+    implementation 'com.github.vscyther:config-framework:Tag'
+}
+```
+
+---
 
 ## Usage
 
@@ -25,6 +64,7 @@ class Inventory_1 {
 ### Java
 
 ```java
+
 @Getter // lombok
 @ConfigPath("messages.yml")
 class Messages {
@@ -49,15 +89,15 @@ class Main {
     @Override
     public void onEnable() {
         final ConfigFrame cf = new ConfigFrame(this);
-        
+
         cf.load(
                 (inventory_1 = new Inventory_1()),
                 (messages = new Messages())
         );
-        
+
         final String title = inventory_1.getTitle();
         final int rows = inventory_1.getRows();
-        
+
         final String message_1 = messages.getMessage_1();
         final String message_2 = messages.getMessage_2();
     }
