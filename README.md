@@ -13,14 +13,14 @@
 
 ### Maven
 
-```maven
+```xml
 <repository>
     <id>jitpack.io</id>
     <url>https://jitpack.io</url>
 </repository>
 ```
 
-```maven
+```xml
 <dependency>
     <groupId>com.github.vscyther</groupId>
     <artifactId>config-framework</artifactId>
